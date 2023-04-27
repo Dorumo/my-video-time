@@ -1,13 +1,13 @@
 import React from 'react'
 import {
-  BrowserRouter as Router, Route, Routes, Navigate
+  BrowserRouter as Router, Route, Routes
 } from 'react-router-dom'
 
 import { UserContextProvider } from './contexts/UserContext'
-import { useUser } from './hook/contexts/useUser'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Description from './pages/Description';
 
 import './styles/main.css'
 
@@ -21,6 +21,8 @@ function App() {
           <Route path="/login" element={ <Login /> } />
 
           <Route path="/register" element={ <Register /> } />
+
+          <Route path="/description/:id" element={ <Description /> } />
         </Routes>
       </Router>
     </UserContextProvider>
